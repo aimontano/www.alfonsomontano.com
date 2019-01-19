@@ -1,0 +1,22 @@
+{
+	"front-end": [
+		"HTMl, CSS, JavaScript",
+		"JQuery",
+		"React",
+		"Bootstrap",
+		"Materialize",
+		"Semantic UI"
+	],
+
+	"back-end": [
+		"NodeJS",
+		"Express",
+		"MySQL",
+		"MongoDB",
+		"Sequelize",
+		"Mongoose",
+		"Firebase"
+	],
+
+	"other": ["Git", "Heroku", "Agile"]
+}
