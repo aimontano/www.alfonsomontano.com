@@ -29,6 +29,7 @@ const layout = type => {
 		} else {
 			html += `<td>${jobSkills["other"][i]}</td>`;
 		}
+
 		html += `</tr>`;
 	}
 	return html;

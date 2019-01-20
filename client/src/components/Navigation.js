@@ -7,9 +7,9 @@ let navStyle = {
 const Navigation = () => {
 	return (
 		<Navbar brand="Alfonso Montano" right fixed={true} style={navStyle}>
-			<NavItem href="#">About</NavItem>
-			<NavItem href="#">Portfolio</NavItem>
-			<NavItem href="#">Contact</NavItem>
+			<NavItem href="/">About</NavItem>
+			<NavItem href="/">Portfolio</NavItem>
+			<NavItem href="/">Contact</NavItem>
 		</Navbar>
 	);
 };

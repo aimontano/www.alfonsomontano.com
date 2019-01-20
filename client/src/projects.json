@@ -1,0 +1,53 @@
+[
+	{
+		"name": "Bootcamp Booster",
+		"image": "/images/bootcampbooster.png",
+		"githubLink": "https://github.com/alexanderjones19/bootcamp-forum",
+		"liveLink": "https://bootcampbooster.herokuapp.com/",
+		"description": "A website designed to build an online community for coding bootcamp students, teachers, developers and those who are interested in joining a bootcamp"
+	},
+	{
+		"name": "Mobile Mechanic",
+		"image": "/images/mobile-mechanics.png",
+		"githubLink": "https://github.com/fieldpalmer/Copper_Skull_Association",
+		"liveLink": "https://mobile-mechanics.herokuapp.com",
+		"description": "Project's idea is to allow users to get an estimate of a car maintentance repair and to be able to schedule a technician to get car serviced"
+	},
+	{
+		"name": "Donde App",
+		"image": "/images/donde1.png",
+		"githubLink": "https://github.com/lantanios/Group_Project",
+		"liveLink": "https://donde1.herokuapp.com/",
+		"description": "A website to comunicate with those around your local area to help each other when disaster strikes"
+	},
+	{
+		"name": "Mobile Mechanic",
+		"githubLink": "",
+		"liveLink": "",
+		"description": ""
+	},
+	{
+		"name": "Bootcamp Booster",
+		"githubLink": "",
+		"liveLink": "",
+		"description": ""
+	},
+	{
+		"name": "Mobile Mechanic",
+		"githubLink": "",
+		"liveLink": "",
+		"description": ""
+	},
+	{
+		"name": "Bootcamp Booster",
+		"githubLink": "",
+		"liveLink": "",
+		"description": ""
+	},
+	{
+		"name": "Mobile Mechanic",
+		"githubLink": "",
+		"liveLink": "",
+		"description": ""
+	}
+]
