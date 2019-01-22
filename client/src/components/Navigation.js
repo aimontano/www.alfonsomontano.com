@@ -1,17 +1,39 @@
 import React from "react";
-import { NavItem, Navbar } from "react-materialize";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 
-let navStyle = {
-	background: "#38435a"
+const styles = {
+	root: {
+		flexGrow: 1
+	},
+	center: {
+		// margin: "auto"
+	},
+	bar: {
+		background: "#2196f3"
+	}
 };
-const Navigation = () => {
+
+function Navigation(props) {
+	const { classes } = props;
 	return (
-		<Navbar brand="Alfonso Montano" right fixed={true} style={navStyle}>
-			<NavItem href="/">About</NavItem>
-			<NavItem href="/">Portfolio</NavItem>
-			<NavItem href="/">Contact</NavItem>
-		</Navbar>
+		<div className={classes.root}>
+			<AppBar position="static" style={styles.bar}>
+				<Toolbar>
+					<Typography variant="h5" color="inherit" className={classes.center}>
+						Alfonso Montano
+					</Typography>
+				</Toolbar>
+			</AppBar>
+		</div>
 	);
+}
+
+Navigation.propTypes = {
+	classes: PropTypes.object.isRequired
 };
 
-export default Navigation;
+export default withStyles(styles)(Navigation);

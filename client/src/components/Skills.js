@@ -1,75 +1,104 @@
 import React from "react";
-import { CardPanel } from "react-materialize";
-import ReactHtmlParser from "react-html-parser";
-
+import {
+	Paper,
+	Typography,
+	withStyles,
+	Table,
+	TableHead,
+	TableRow,
+	TableCell,
+	TableBody
+} from "@material-ui/core";
+import PropTypes from "prop-types";
 const jobSkills = require("./../skills.json");
 
-// function gives a table layout of skills
-// meaning you can add as many skills as you want to without
-// having to manually add it yourself
-const layout = type => {
-	let html = "";
-	for (let i = 0; i < jobSkills[type].length; i++) {
-		html += `<tr>`;
-
-		if (jobSkills["front-end"][i] === undefined) {
-			html += "<td></td>";
-		} else {
-			html += `<td>${jobSkills["front-end"][i]}</td>`;
-		}
-
-		if (jobSkills["back-end"][i] === undefined) {
-			html += "<td></td>";
-		} else {
-			html += `<td>${jobSkills["back-end"][i]}</td>`;
-		}
-
-		if (jobSkills["other"][i] === undefined) {
-			html += "<td></td>";
-		} else {
-			html += `<td>${jobSkills["other"][i]}</td>`;
-		}
-
-		html += `</tr>`;
+const styles = theme => ({
+	root: {
+		flexGrow: 1,
+		width: "100%",
+		marginTop: theme.spacing.unit * 3
+	},
+	table: {},
+	paper: {
+		padding: 25,
+		margin: "auto",
+		overflow: "auto"
 	}
-	return html;
+});
+
+let id = 0;
+
+let rows = [];
+
+function createData(frontEnd, backEnd, other) {
+	id += 1;
+	if (frontEnd === undefined) frontEnd = "";
+	if (backEnd === undefined) backEnd = "";
+	if (other === undefined) other = "";
+	return { id, frontEnd, backEnd, other };
+}
+
+const pushData = type => {
+	for (let i = 0; i < jobSkills[type].length; i++) {
+		rows.push(
+			createData(
+				jobSkills["front-end"][i],
+				jobSkills["back-end"][i],
+				jobSkills["other"][i]
+			)
+		);
+	}
 };
 
-// this function checks which skillset has the most skills
-// then calls layout function to loop through all of the skills and
-// not miss any.
-const displaySkills = () => {
+const storeData = () => {
 	if (
 		jobSkills["front-end"].length > jobSkills["back-end"].length &&
 		jobSkills["front-end"].length > jobSkills["other"].length
 	) {
-		return layout("front-end");
+		return pushData("front-end");
 	} else if (
 		jobSkills["back-end"].length > jobSkills["front-end"].length &&
 		jobSkills["back-end"].length > jobSkills["other"].length
 	) {
-		return layout("back-end");
+		return pushData("back-end");
 	} else {
-		return layout("other");
+		return pushData("other");
 	}
 };
 
-const Skills = () => {
+storeData();
+
+const Skills = props => {
+	const { classes } = props;
 	return (
-		<CardPanel>
-			<h4>Skills</h4>
-			<table className="responsive-table">
-				<thead>
-					<tr>
-						<th>Front-End</th>
-						<th>Back-End</th>
-						<th>Other</th>
-					</tr>
-				</thead>
-				<tbody>{ReactHtmlParser(displaySkills())}</tbody>
-			</table>
-		</CardPanel>
+		<Paper className={classes.paper}>
+			<Typography gutterBottom variant="h4">
+				My Skills
+			</Typography>
+			<Table className={classes.table}>
+				<TableHead>
+					<TableRow>
+						<TableCell>Front-End</TableCell>
+						<TableCell>Back-End</TableCell>
+						<TableCell>Other</TableCell>
+					</TableRow>
+				</TableHead>
+				<TableBody>
+					{rows.map(({ id, frontEnd, backEnd, other }) => (
+						<TableRow key={id}>
+							<TableCell>{frontEnd}</TableCell>
+							<TableCell>{backEnd}</TableCell>
+							<TableCell>{other}</TableCell>
+						</TableRow>
+					))}
+				</TableBody>
+			</Table>
+		</Paper>
 	);
 };
 
-export default Skills;
+Skills.propTypes = {
+	classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(Skills);

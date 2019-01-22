@@ -15,7 +15,7 @@ const PortfolioSample = () => {
 				<h4>UNC Coding Bootcamp Projects</h4>
 				<Row>
 					{myProjects.map((item, id) => (
-						<Col s={6} m={4} key={id}>
+						<Col m={6} l={4} key={id}>
 							<Project
 								name={item.name}
 								gitLink={item.githubLink}
