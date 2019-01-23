@@ -8,7 +8,7 @@ import { Grid } from "@material-ui/core";
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<React.Fragment>
 				<Navigation />
 				<FrontPage />
 				<Grid container justify="center">
@@ -17,7 +17,7 @@ class App extends Component {
 						<PortfolioSample />
 					</Grid>
 				</Grid>
-			</div>
+			</React.Fragment>
 		);
 	}
 }

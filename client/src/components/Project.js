@@ -1,40 +1,53 @@
 import React from "react";
-import { Card } from "react-materialize";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faCodeBranch } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
+import {
+	withStyles,
+	Card,
+	CardHeader,
+	Typography,
+	CardMedia,
+	CardActions,
+	CardContent,
+	Button
+} from "@material-ui/core";
+
+const styles = theme => ({
+	actions: {
+		display: "flex"
+	},
+	media: {
+		height: 0,
+		paddingTop: "56.25%" // 16:9
+	}
+});
 
 const Project = props => {
+	const { classes } = props;
 	return (
 		<Card>
-			<div className="card-image">
-				<img src={props.image} alt="project" />
-				<a
-					href={props.liveLink}
-					className="btn-floating halfway-fab left waves-effect waves-light blue lighten-1"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<i>
-						<FontAwesomeIcon icon={faEye} />
-					</i>
-				</a>
-				<a
-					href={props.gitLink}
-					className="btn-floating halfway-fab waves-effect waves-light orange accent-3"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<i>
-						<FontAwesomeIcon icon={faCodeBranch} />
-					</i>
-				</a>
-			</div>
-			<div className="card-content">
-				<span className="card-title">{props.name}</span>
-				<p>{props.description}</p>
-			</div>
+			<CardHeader title={props.title} />
+			<CardMedia
+				className={classes.media}
+				image={props.image}
+				title={props.title}
+			/>
+			<CardContent>
+				<Typography component="p">{props.description}</Typography>
+			</CardContent>
+			<CardActions className={classes.actions} disableActionSpacing>
+				<Button size="small" color="primary">
+					Demo
+				</Button>
+				<Button size="small" color="primary">
+					Repository
+				</Button>
+			</CardActions>
 		</Card>
 	);
 };
 
-export default Project;
+Project.propTypes = {
+	classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(Project);
