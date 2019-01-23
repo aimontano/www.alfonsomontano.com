@@ -9,7 +9,8 @@ myProjects = [myProjects[0], myProjects[1], myProjects[2]];
 const styles = theme => ({
 	root: {
 		flexGrow: 1,
-		marginTop: 20
+		marginTop: 40,
+		marginBottom: 40
 	}
 });
 
@@ -18,11 +19,11 @@ const PortfolioSample = props => {
 	return (
 		<div className={classes.root}>
 			<Typography variant="h4" gutterBottom>
-				Projects
+				UNC Coding Bootcamp Projects
 			</Typography>
-			<Grid container spacing={8}>
+			<Grid container spacing={24}>
 				{myProjects.map((project, id) => (
-					<Grid item xs id={id}>
+					<Grid item md id={id}>
 						<Project
 							title={project.name}
 							image={project.image}
