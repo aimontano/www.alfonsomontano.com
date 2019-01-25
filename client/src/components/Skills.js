@@ -10,10 +10,7 @@ import {
 	TableBody
 } from "@material-ui/core";
 import PropTypes from "prop-types";
-import blue from "@material-ui/core/colors/blueGrey";
 const jobSkills = require("./../skills.json");
-
-const primary = blue[50];
 
 const styles = theme => ({
 	root: {
@@ -25,8 +22,8 @@ const styles = theme => ({
 	paper: {
 		padding: 25,
 		margin: "auto",
-		overflow: "auto",
-		background: primary
+		overflow: "auto"
+		// background: primary
 	}
 });
 

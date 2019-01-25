@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Navigation from "./components/Navigation";
-import FrontPage from "./components/FrontPage";
 import About from "./components/About";
 import PortfolioSample from "./components/PortfolioSample";
 import { Grid, CssBaseline } from "@material-ui/core";
+import Contact from "./components/Contact";
 
 class App extends Component {
 	render() {
@@ -11,11 +11,13 @@ class App extends Component {
 			<React.Fragment>
 				<CssBaseline>
 					<Navigation />
-					<FrontPage />
 					<Grid container justify="center">
-						<Grid item xs={11}>
+						<Grid item md={10} xs={11}>
 							<About />
 							<PortfolioSample />
+						</Grid>
+						<Grid item md={6} xs={11}>
+							<Contact />
 						</Grid>
 					</Grid>
 				</CssBaseline>

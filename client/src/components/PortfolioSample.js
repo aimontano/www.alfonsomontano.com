@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, withStyles, Typography } from "@material-ui/core";
+import { Grid, withStyles, Typography, Fab } from "@material-ui/core";
 import Project from "./Project.js";
+import ViewAllIcon from "@material-ui/icons/ViewModule";
 
 let myProjects = require("./../projects.json");
 myProjects = [myProjects[0], myProjects[1], myProjects[2]];
@@ -10,7 +11,13 @@ const styles = theme => ({
 	root: {
 		flexGrow: 1,
 		marginTop: 40,
-		marginBottom: 40
+		marginBottom: 25
+	},
+	fab: {
+		margin: theme.spacing.unit
+	},
+	extendedIcon: {
+		marginRight: theme.spacing.unit
 	}
 });
 
@@ -34,6 +41,17 @@ const PortfolioSample = props => {
 					</Grid>
 				))}
 			</Grid>
+			<br />
+			<Fab
+				variant="extended"
+				aria-label="View All"
+				className={classes.fab}
+				color="primary"
+			>
+				<ViewAllIcon />
+				View All Projects
+			</Fab>
+			<br />
 		</div>
 	);
 };

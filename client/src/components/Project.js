@@ -8,8 +8,10 @@ import {
 	CardMedia,
 	CardActions,
 	CardContent,
-	Button
+	Button,
+	Avatar
 } from "@material-ui/core";
+import FolderIcon from "@material-ui/icons/FolderOpen";
 
 const styles = theme => ({
 	actions: {
@@ -25,7 +27,14 @@ const Project = props => {
 	const { classes } = props;
 	return (
 		<Card>
-			<CardHeader title={props.title} />
+			<CardHeader
+				avatar={
+					<Avatar aria-label="Project" className={classes.avatar}>
+						<FolderIcon />
+					</Avatar>
+				}
+				title={props.title}
+			/>
 			<CardMedia
 				className={classes.media}
 				image={props.image}
@@ -38,7 +47,7 @@ const Project = props => {
 				<Button size="small" color="primary">
 					Demo
 				</Button>
-				<Button size="small" color="primary">
+				<Button size="small" color="default">
 					Repository
 				</Button>
 			</CardActions>

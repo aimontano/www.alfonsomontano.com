@@ -23,18 +23,18 @@ function Navigation(props) {
 	const { classes } = props;
 	return (
 		<div className={classes.root}>
-			<AppBar position="static" className={classes.bar}>
-				<Toolbar variant="dense">
+			<AppBar position="static" color="inherit">
+				<Toolbar>
 					<Typography variant="h5" color="inherit" className={classes.grow}>
 						Alfonso Montano
 					</Typography>
-					<IconButton color="inherit">
+					<IconButton color="primary">
 						<Home />
 					</IconButton>
-					<IconButton color="inherit">
+					<IconButton color="secondary">
 						<Folder />
 					</IconButton>
-					<IconButton color="inherit">
+					<IconButton color="default">
 						<Phone />
 					</IconButton>
 				</Toolbar>

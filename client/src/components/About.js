@@ -41,7 +41,7 @@ const About = props => {
 								<ButtonBase className={classes.image}>
 									<img
 										className={classes.img}
-										src="https://react-materialize.github.io/img/sample-1.jpg"
+										src="https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-512.png"
 										alt="sample"
 									/>
 								</ButtonBase>
@@ -52,7 +52,7 @@ const About = props => {
 										<Typography gutterBottom variant="h4">
 											About Me
 										</Typography>
-										<Typography gutterBottom className={classes.text}>
+										<Typography gutterBottom>
 											This section will be dedicated to write about my thing and
 											what I plan to do as a web developer
 										</Typography>
