@@ -30,7 +30,7 @@ const PortfolioSample = props => {
 			</Typography>
 			<Grid container spacing={24}>
 				{myProjects.map((project, id) => (
-					<Grid item md id={id}>
+					<Grid item md key={id}>
 						<Project
 							title={project.name}
 							image={project.image}

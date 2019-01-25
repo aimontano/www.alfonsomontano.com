@@ -8,10 +8,13 @@ import {
 	CardMedia,
 	CardActions,
 	CardContent,
-	Button,
-	Avatar
+	Avatar,
+	Fab
 } from "@material-ui/core";
-import FolderIcon from "@material-ui/icons/FolderOpen";
+import FolderIcon from "@material-ui/icons/FolderOutlined";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const styles = theme => ({
 	actions: {
@@ -20,8 +23,19 @@ const styles = theme => ({
 	media: {
 		height: 0,
 		paddingTop: "56.25%" // 16:9
+	},
+	margin: {
+		margin: theme.spacing.unit,
+		fontSize: 18
+	},
+	avatar: {
+		background: "#607d8b"
 	}
 });
+
+const redirectToPage = url => {
+	window.open(url, "_blank");
+};
 
 const Project = props => {
 	const { classes } = props;
@@ -44,12 +58,22 @@ const Project = props => {
 				<Typography component="p">{props.description}</Typography>
 			</CardContent>
 			<CardActions className={classes.actions} disableActionSpacing>
-				<Button size="small" color="primary">
-					Demo
-				</Button>
-				<Button size="small" color="default">
-					Repository
-				</Button>
+				<Fab
+					className={classes.margin}
+					size="small"
+					color="primary"
+					onClick={() => redirectToPage(props.live)}
+				>
+					<FontAwesomeIcon icon={faEye} />
+				</Fab>
+				<Fab
+					className={classes.margin}
+					size="small"
+					color="secondary"
+					onClick={() => redirectToPage(props.github)}
+				>
+					<FontAwesomeIcon icon={faGithub} />
+				</Fab>
 			</CardActions>
 		</Card>
 	);

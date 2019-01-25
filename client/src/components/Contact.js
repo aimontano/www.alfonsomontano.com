@@ -92,7 +92,7 @@ const Contact = props => {
 	);
 };
 
-Contact.PropTypes = {
+Contact.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 

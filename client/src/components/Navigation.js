@@ -13,9 +13,6 @@ const styles = {
 	},
 	grow: {
 		flexGrow: 1
-	},
-	bar: {
-		background: "#2196f3"
 	}
 };
 
@@ -23,18 +20,18 @@ function Navigation(props) {
 	const { classes } = props;
 	return (
 		<div className={classes.root}>
-			<AppBar position="static" color="inherit">
+			<AppBar position="static" color="primary">
 				<Toolbar>
 					<Typography variant="h5" color="inherit" className={classes.grow}>
 						Alfonso Montano
 					</Typography>
-					<IconButton color="primary">
+					<IconButton color="secondary">
 						<Home />
 					</IconButton>
-					<IconButton color="secondary">
+					<IconButton color="inherit">
 						<Folder />
 					</IconButton>
-					<IconButton color="default">
+					<IconButton color="inherit">
 						<Phone />
 					</IconButton>
 				</Toolbar>
