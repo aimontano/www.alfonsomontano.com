@@ -6,6 +6,7 @@ import { Grid, CssBaseline } from "@material-ui/core";
 import Contact from "./components/Contact";
 import { BrowserRouter as Router } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import axios from "axios";
 
 const theme = createMuiTheme({
 	palette: {
@@ -24,6 +25,61 @@ const theme = createMuiTheme({
 });
 
 class App extends Component {
+	state = {};
+
+	sendMessage = () => {
+		let template_params = {
+			from_name: `${this.state["outline-name"]} ${
+				this.state["outline-lastName"]
+			}`,
+			to_name: "Alfonso Montano",
+			message_html: this.state["outline-message"],
+			reply_to: this.state["outline-email"]
+		};
+
+		const data = {
+			service_id: "alfonso",
+			template_id: "portfolio",
+			user_id: "user_bmxUz6P57Eec1WIQmdQhW",
+			template_params: template_params
+		};
+
+		fetch("https://api.emailjs.com/api/v1.0/email/send", {
+			method: "POST",
+			headers: {
+				Accept: "application/json",
+				"Content-Type": "application/json"
+			},
+			body: data
+		})
+			// axios({
+			// 	method: "post",
+			// 	url: "https://api.emailjs.com/api/v1.0/email/send",
+			// 	data: JSON.stringify(data),
+			// 	contentType: "application/json"
+			// })
+			.then(res => {
+				console.log("Success");
+			})
+			.catch(err => {
+				console.log(err);
+			});
+
+		// this.setState({
+		// 	"outline-name": "",
+		// 	"outline-lastName": "",
+		// 	"outline-email": "",
+		// 	"outline-message": ""
+		// });
+	};
+
+	handleInputChange = event => {
+		const { id, value } = event.target;
+		this.setState({
+			[id]: value
+		});
+	};
+
 	render() {
 		return (
 			<Router>
@@ -36,7 +92,10 @@ class App extends Component {
 								<PortfolioSample />
 							</Grid>
 							<Grid item md={4} xs={11}>
-								<Contact />
+								<Contact
+									sendMessage={this.sendMessage}
+									handleInputChange={this.handleInputChange}
+								/>
 							</Grid>
 						</Grid>
 					</CssBaseline>

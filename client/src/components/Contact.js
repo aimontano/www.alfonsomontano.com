@@ -42,6 +42,7 @@ const Contact = props => {
 				<TextField
 					required
 					fullWidth
+					onChange={props.handleInputChange}
 					id="outline-name"
 					label="Name"
 					className={classes.textField}
@@ -52,6 +53,7 @@ const Contact = props => {
 					required
 					fullWidth
 					id="outline-lastName"
+					onChange={props.handleInputChange}
 					label="Last name"
 					className={classes.textField}
 					margin="normal"
@@ -60,8 +62,8 @@ const Contact = props => {
 				<TextField
 					required
 					fullWidth
-					type="email"
 					id="outline-email"
+					onChange={props.handleInputChange}
 					label="Email"
 					className={classes.textField}
 					margin="normal"
@@ -72,6 +74,7 @@ const Contact = props => {
 					fullWidth
 					multiline
 					id="outline-message"
+					onChange={props.handleInputChange}
 					label="Message"
 					className={classes.textField}
 					margin="normal"
@@ -83,6 +86,7 @@ const Contact = props => {
 					variant="extended"
 					aria-label="Submit"
 					className={classes.fab}
+					onClick={() => props.sendMessage()}
 				>
 					<NavigationIcon className={classes.extendedIcon} />
 					Submit
