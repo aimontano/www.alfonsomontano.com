@@ -6,7 +6,6 @@ import { Grid, CssBaseline } from "@material-ui/core";
 import Contact from "./components/Contact";
 import { BrowserRouter as Router } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import axios from "axios";
 
 const theme = createMuiTheme({
 	palette: {
@@ -43,34 +42,6 @@ class App extends Component {
 			user_id: "user_bmxUz6P57Eec1WIQmdQhW",
 			template_params: template_params
 		};
-
-		fetch("https://api.emailjs.com/api/v1.0/email/send", {
-			method: "POST",
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json"
-			},
-			body: data
-		})
-			// axios({
-			// 	method: "post",
-			// 	url: "https://api.emailjs.com/api/v1.0/email/send",
-			// 	data: JSON.stringify(data),
-			// 	contentType: "application/json"
-			// })
-			.then(res => {
-				console.log("Success");
-			})
-			.catch(err => {
-				console.log(err);
-			});
-
-		// this.setState({
-		// 	"outline-name": "",
-		// 	"outline-lastName": "",
-		// 	"outline-email": "",
-		// 	"outline-message": ""
-		// });
 	};
 
 	handleInputChange = event => {
