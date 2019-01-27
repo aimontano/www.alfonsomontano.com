@@ -21,16 +21,18 @@
 		"description": "A website to comunicate with those around your local area to help each other when disaster strikes"
 	},
 	{
-		"name": "Mobile Mechanic",
-		"githubLink": "",
-		"liveLink": "",
-		"description": ""
+		"name": "News Scraper",
+		"image": "/images/thenews-scraper.png",
+		"githubLink": "https://github.com/aimontano/news-scraper",
+		"liveLink": "http://thenews-scraper.herokuapp.com/",
+		"description": "A web program that allows users to view news headlines and save their preferred ones. It allows users to add notes to saved articles and delete them as they wish"
 	},
 	{
-		"name": "Bootcamp Booster",
-		"githubLink": "",
-		"liveLink": "",
-		"description": ""
+		"name": "Burger",
+		"image": "/images/eatallburger.png",
+		"githubLink": "https://github.com/aimontano/burger",
+		"liveLink": "https://eatallburger.herokuapp.com/",
+		"description": "None yet"
 	},
 	{
 		"name": "Mobile Mechanic",

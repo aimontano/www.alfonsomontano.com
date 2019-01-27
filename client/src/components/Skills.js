@@ -27,10 +27,15 @@ const styles = theme => ({
 	}
 });
 
+// id is to store the array item id
 let id = 0;
 
+// stores all skills objects
 let rows = [];
 
+// create data returns an object
+// takes three params: front-end skill,
+// back-end skill & other skill
 function createData(frontEnd, backEnd, other) {
 	id += 1;
 	if (frontEnd === undefined) frontEnd = "";
@@ -39,6 +44,8 @@ function createData(frontEnd, backEnd, other) {
 	return { id, frontEnd, backEnd, other };
 }
 
+// function pushes object item to rows by calling
+// createData function
 const pushData = type => {
 	for (let i = 0; i < jobSkills[type].length; i++) {
 		rows.push(
@@ -51,6 +58,9 @@ const pushData = type => {
 	}
 };
 
+// function checks which skill array has the most values
+// based on lenght, the array is looped through to get
+// all items and display them by calling pushData function
 const storeData = () => {
 	if (
 		jobSkills["front-end"].length > jobSkills["back-end"].length &&

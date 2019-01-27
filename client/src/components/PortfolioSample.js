@@ -5,7 +5,10 @@ import Project from "./Project.js";
 import ViewAllIcon from "@material-ui/icons/ViewModule";
 
 let myProjects = require("./../projects.json");
-myProjects = [myProjects[0], myProjects[1], myProjects[2]];
+
+// show only the first three projects in home page
+if (window.location.pathname !== "/projects")
+	myProjects = [myProjects[0], myProjects[1], myProjects[2]];
 
 const styles = theme => ({
 	root: {
@@ -25,12 +28,13 @@ const PortfolioSample = props => {
 	const { classes } = props;
 	return (
 		<div className={classes.root}>
-			<Typography variant="h4" gutterBottom>
-				UNC Coding Bootcamp Projects
+			<Typography variant="h4">Projects</Typography>
+			<Typography variant="subheading" gutterBottom>
+				Projects are laid out from most recent to oldest
 			</Typography>
 			<Grid container spacing={24}>
 				{myProjects.map((project, id) => (
-					<Grid item md key={id}>
+					<Grid item md={4} key={id}>
 						<Project
 							title={project.name}
 							image={project.image}

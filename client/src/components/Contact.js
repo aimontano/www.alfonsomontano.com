@@ -4,30 +4,18 @@ import {
 	withStyles,
 	Paper,
 	Typography,
-	TextField,
-	Fab
+	List,
+	ListItem,
+	ListItemIcon,
+	ListItemText
 } from "@material-ui/core";
-import NavigationIcon from "@material-ui/icons/Navigation";
+import MailIcon from "@material-ui/icons/Mail";
 
 const styles = theme => ({
-	container: {
-		display: "flex",
-		flexWrap: "wrap"
-	},
 	paper: {
 		padding: 25,
 		margin: "auto",
 		marginBottom: 30
-	},
-	textField: {
-		marginLeft: theme.spacing.unit,
-		marginRight: theme.spacing.unit
-	},
-	fab: {
-		margin: theme.spacing.unit
-	},
-	extendedIcon: {
-		marginRight: theme.spacing.unit
 	}
 });
 
@@ -38,60 +26,19 @@ const Contact = props => {
 			<Typography gutterBottom variant="h4">
 				Contact Me
 			</Typography>
-			<form className={classes.container}>
-				<TextField
-					required
-					fullWidth
-					onChange={props.handleInputChange}
-					id="outline-name"
-					label="Name"
-					className={classes.textField}
-					margin="normal"
-					variant="outlined"
-				/>
-				<TextField
-					required
-					fullWidth
-					id="outline-lastName"
-					onChange={props.handleInputChange}
-					label="Last name"
-					className={classes.textField}
-					margin="normal"
-					variant="outlined"
-				/>
-				<TextField
-					required
-					fullWidth
-					id="outline-email"
-					onChange={props.handleInputChange}
-					label="Email"
-					className={classes.textField}
-					margin="normal"
-					variant="outlined"
-				/>
-				<TextField
-					required
-					fullWidth
-					multiline
-					id="outline-message"
-					onChange={props.handleInputChange}
-					label="Message"
-					className={classes.textField}
-					margin="normal"
-					variant="outlined"
-					rows="10"
-				/>
-				<Fab
-					color="primary"
-					variant="extended"
-					aria-label="Submit"
-					className={classes.fab}
-					onClick={() => props.sendMessage()}
+			<Typography>You may reach me at my email:</Typography>
+			<List component="nav">
+				<ListItem
+					button
+					href="mailto:aimorales.montano@gmail.com"
+					component="a"
 				>
-					<NavigationIcon className={classes.extendedIcon} />
-					Submit
-				</Fab>
-			</form>
+					<ListItemIcon>
+						<MailIcon />
+					</ListItemIcon>
+					<ListItemText primary="aimorales.montano@gmail.com" />
+				</ListItem>
+			</List>
 		</Paper>
 	);
 };
