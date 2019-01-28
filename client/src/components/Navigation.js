@@ -6,6 +6,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { IconButton } from "@material-ui/core";
 import { Home } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const styles = {
 	root: {
@@ -26,7 +27,7 @@ function Navigation(props) {
 						Alfonso Montano
 					</Typography>{" "}
 					{window.location.pathname !== "/" ? (
-						<IconButton color="inherit">
+						<IconButton color="inherit" component={Link} to="/">
 							<Home />
 						</IconButton>
 					) : (

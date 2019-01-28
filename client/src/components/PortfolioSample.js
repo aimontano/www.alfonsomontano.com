@@ -3,12 +3,8 @@ import PropTypes from "prop-types";
 import { Grid, withStyles, Typography, Fab } from "@material-ui/core";
 import Project from "./Project.js";
 import ViewAllIcon from "@material-ui/icons/ViewModule";
-
-let myProjects = require("./../projects.json");
-
-// show only the first three projects in home page
-if (window.location.pathname !== "/projects")
-	myProjects = [myProjects[0], myProjects[1], myProjects[2]];
+import { Home } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const styles = theme => ({
 	root: {
@@ -26,14 +22,20 @@ const styles = theme => ({
 
 const PortfolioSample = props => {
 	const { classes } = props;
+	let projects = props.projects;
+
+	// show only the first three projects in home page
+	if (window.location.pathname !== "/projects")
+		projects = [props.projects[0], props.projects[1], props.projects[2]];
+
 	return (
 		<div className={classes.root}>
 			<Typography variant="h4">Projects</Typography>
-			<Typography variant="subheading" gutterBottom>
+			<Typography variant="subtitle1" gutterBottom>
 				Projects are laid out from most recent to oldest
 			</Typography>
 			<Grid container spacing={24}>
-				{myProjects.map((project, id) => (
+				{projects.map((project, id) => (
 					<Grid item md={4} key={id}>
 						<Project
 							title={project.name}
@@ -46,14 +48,23 @@ const PortfolioSample = props => {
 				))}
 			</Grid>
 			<br />
+
 			<Fab
 				variant="extended"
-				aria-label="View All"
 				className={classes.fab}
 				color="primary"
+				component={Link}
+				to={window.location.pathname === "/" ? "/projects" : "/"}
 			>
-				<ViewAllIcon />
-				View All Projects
+				{window.location.pathname === "/" ? (
+					<>
+						<ViewAllIcon /> View All Projects
+					</>
+				) : (
+					<>
+						<Home /> Home
+					</>
+				)}
 			</Fab>
 			<br />
 		</div>

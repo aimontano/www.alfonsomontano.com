@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Navigation from "./components/Navigation";
-import About from "./components/About";
-import PortfolioSample from "./components/PortfolioSample";
-import { Grid, CssBaseline } from "@material-ui/core";
-import Contact from "./components/Contact";
-import { BrowserRouter as Router } from "react-router-dom";
+import { CssBaseline, Grid } from "@material-ui/core";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import MainPage from "./components/MainPage";
+import PortfolioSample from "./components/PortfolioSample";
+
+let myProjects = require("./projects.json");
 
 const theme = createMuiTheme({
 	palette: {
@@ -24,7 +25,9 @@ const theme = createMuiTheme({
 });
 
 class App extends Component {
-	state = {};
+	state = {
+		projects: myProjects
+	};
 
 	render() {
 		return (
@@ -33,16 +36,27 @@ class App extends Component {
 					<CssBaseline>
 						<Navigation />
 						<Grid container justify="center">
-							<Grid item md={10} xs={11}>
-								<About />
-								<PortfolioSample />
-							</Grid>
-							<Grid item md={4} xs={11}>
-								<Contact
-									sendMessage={this.sendMessage}
-									handleInputChange={this.handleInputChange}
+							<Switch>
+								<Route
+									exact
+									path="/"
+									render={props => (
+										<MainPage {...props} projects={this.state.projects} />
+									)}
 								/>
-							</Grid>
+								<Route
+									exact
+									path="/projects"
+									render={props => (
+										<Grid item md={11}>
+											<PortfolioSample
+												{...props}
+												projects={this.state.projects}
+											/>
+										</Grid>
+									)}
+								/>
+							</Switch>
 						</Grid>
 					</CssBaseline>
 				</MuiThemeProvider>
