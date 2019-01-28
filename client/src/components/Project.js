@@ -18,18 +18,21 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const styles = theme => ({
 	actions: {
-		display: "flex"
+		display: "flex",
+		flexWrap: "wrap"
 	},
 	media: {
 		height: 0,
 		paddingTop: "56.25%" // 16:9
 	},
-	margin: {
-		margin: theme.spacing.unit,
-		fontSize: 18
+	fab: {
+		margin: theme.spacing.unit
 	},
 	avatar: {
 		background: "#607d8b"
+	},
+	extendedIcon: {
+		marginRight: theme.spacing.unit
 	}
 });
 
@@ -58,21 +61,27 @@ const Project = props => {
 				<Typography component="p">{props.description}</Typography>
 			</CardContent>
 			<CardActions className={classes.actions} disableActionSpacing>
+				{props.live.trim().length !== 0 ? (
+					<Fab
+						className={classes.fab}
+						variant="extended"
+						color="primary"
+						onClick={() => redirectToPage(props.live)}
+					>
+						<FontAwesomeIcon icon={faEye} className={classes.extendedIcon} />
+						Demo
+					</Fab>
+				) : (
+					<></>
+				)}
 				<Fab
-					className={classes.margin}
-					size="small"
-					color="primary"
-					onClick={() => redirectToPage(props.live)}
-				>
-					<FontAwesomeIcon icon={faEye} />
-				</Fab>
-				<Fab
-					className={classes.margin}
-					size="small"
+					className={classes.fab}
+					variant="extended"
 					color="secondary"
 					onClick={() => redirectToPage(props.github)}
 				>
-					<FontAwesomeIcon icon={faGithub} />
+					<FontAwesomeIcon icon={faGithub} className={classes.extendedIcon} />
+					Repository
 				</Fab>
 			</CardActions>
 		</Card>
