@@ -48,7 +48,7 @@ class App extends Component {
 									exact
 									path="/projects"
 									render={props => (
-										<Grid item md={11}>
+										<Grid item md={11} xs={11}>
 											<PortfolioSample
 												{...props}
 												projects={this.state.projects}
