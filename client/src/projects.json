@@ -35,21 +35,24 @@
 		"description": "None yet"
 	},
 	{
-		"name": "Mobile Mechanic",
-		"githubLink": "",
-		"liveLink": "",
-		"description": ""
+		"name": "Friend Finder",
+		"image": "/images/aimfriendfinder.png",
+		"githubLink": "https://github.com/aimontano/FriendFinder",
+		"liveLink": "https://aimfriendfinder.herokuapp.com",
+		"description": "This small program allows users to answer a questionnaire and based on the answers match to other users and return a best match."
 	},
 	{
-		"name": "Bootcamp Booster",
-		"githubLink": "",
+		"name": "Bamazon",
+		"image": "/images/bamazon.png",
+		"githubLink": "https://github.com/aimontano/Bamazon",
 		"liveLink": "",
-		"description": ""
+		"description": "A Node command line application that allows customers to buy products from a store named Bamazon. This program allows management to control the quantity of products and to add new products"
 	},
 	{
-		"name": "Mobile Mechanic",
-		"githubLink": "",
+		"name": "Liri Node App",
+		"image": "/images/liri.png",
+		"githubLink": "https://github.com/aimontano/liri-node-app",
 		"liveLink": "",
-		"description": ""
+		"description": "A command line program that allows you to search through Spotify, IMDB movies and bands in town using an api. "
 	}
 ]
