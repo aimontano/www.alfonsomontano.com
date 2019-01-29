@@ -2,8 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Skills from "./Skills";
-import { Grid, Paper, ButtonBase, Typography } from "@material-ui/core";
+import {
+	Grid,
+	Paper,
+	ButtonBase,
+	Typography,
+	IconButton,
+	Icon
+} from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
+import MailIcon from "@material-ui/icons/Mail";
 const styles = {
 	root: {
 		flexGrow: 1,
@@ -56,6 +66,23 @@ const About = props => {
 											This section will be dedicated to write about my thing and
 											what I plan to do as a web developer
 										</Typography>
+										<IconButton>
+											<Icon color="primary">
+												<FontAwesomeIcon icon={faLinkedin} />
+											</Icon>
+										</IconButton>
+
+										<IconButton>
+											<Icon color="secondary">
+												<FontAwesomeIcon icon={faGithub} />
+											</Icon>
+										</IconButton>
+
+										<IconButton>
+											<Icon color="default">
+												<MailIcon />
+											</Icon>
+										</IconButton>
 									</Grid>
 								</Grid>
 							</Grid>
