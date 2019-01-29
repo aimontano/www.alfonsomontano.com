@@ -28,12 +28,11 @@ const styles = theme => ({
 	fab: {
 		margin: theme.spacing.unit
 	},
-	avatar: {
-		background: "#607d8b"
-	},
+	avatar: {},
 	extendedIcon: {
 		marginRight: theme.spacing.unit
-	}
+	},
+	title: {}
 });
 
 const redirectToPage = url => {
@@ -45,6 +44,7 @@ const Project = props => {
 	return (
 		<Card>
 			<CardHeader
+				className={classes.title}
 				avatar={
 					<Avatar aria-label="Project" className={classes.avatar}>
 						<FolderIcon />
@@ -65,7 +65,7 @@ const Project = props => {
 					<Fab
 						className={classes.fab}
 						variant="extended"
-						color="primary"
+						size="small"
 						onClick={() => redirectToPage(props.live)}
 					>
 						<FontAwesomeIcon icon={faEye} className={classes.extendedIcon} />
@@ -77,6 +77,7 @@ const Project = props => {
 				<Fab
 					className={classes.fab}
 					variant="extended"
+					size="small"
 					color="secondary"
 					onClick={() => redirectToPage(props.github)}
 				>

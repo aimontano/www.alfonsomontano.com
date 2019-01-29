@@ -51,6 +51,7 @@ const PortfolioSample = props => {
 
 			<Fab
 				variant="extended"
+				size="medium"
 				className={classes.fab}
 				color="primary"
 				component={Link}
