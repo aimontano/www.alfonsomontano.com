@@ -24,7 +24,7 @@ const styles = {
 		margin: "auto"
 	},
 	image: {
-		width: 200,
+		width: "100%",
 		height: 200
 	},
 	img: {
@@ -49,11 +49,7 @@ const About = props => {
 						<Grid container spacing={24} justify="center">
 							<Grid item>
 								<ButtonBase className={classes.image}>
-									<img
-										className={classes.img}
-										src="https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-512.png"
-										alt="sample"
-									/>
+									<img className={classes.img} src="/images/me.jpg" alt="me" />
 								</ButtonBase>
 							</Grid>
 							<Grid item xs={12} sm container>
