@@ -48,7 +48,7 @@ const About = props => {
 					<Paper className={classes.paper}>
 						<Grid container spacing={24} justify="center">
 							<Grid item>
-								<ButtonBase className={classes.image}>
+								<ButtonBase className={classes.image} square="true">
 									<img className={classes.img} src="/images/me.jpg" alt="me" />
 								</ButtonBase>
 							</Grid>
