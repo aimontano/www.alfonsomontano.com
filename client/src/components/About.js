@@ -62,19 +62,31 @@ const About = props => {
 											This section will be dedicated to write about my thing and
 											what I plan to do as a web developer
 										</Typography>
-										<IconButton>
+										<IconButton
+											component="a"
+											href="https://www.linkedin.com/in/alfonso-montano-478931166/"
+											target="_blank"
+										>
 											<Icon color="primary">
 												<FontAwesomeIcon icon={faLinkedin} />
 											</Icon>
 										</IconButton>
 
-										<IconButton>
+										<IconButton
+											component="a"
+											href="https://www.github.com/aimontano"
+											target="_blank"
+										>
 											<Icon color="secondary">
 												<FontAwesomeIcon icon={faGithub} />
 											</Icon>
 										</IconButton>
 
-										<IconButton>
+										<IconButton
+											component="a"
+											href="mailto:aimorales.montano@gmail.com"
+											target="_blank"
+										>
 											<Icon color="default">
 												<MailIcon />
 											</Icon>
