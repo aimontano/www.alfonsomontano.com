@@ -28,6 +28,9 @@ const PortfolioSample = props => {
 	if (window.location.pathname !== "/projects")
 		projects = [props.projects[0], props.projects[1], props.projects[2]];
 
+	// scroll to the top
+	window.scroll({ top: 0, left: 0, behavior: "smooth" });
+
 	return (
 		<div className={classes.root}>
 			<Typography variant="h4">Projects</Typography>

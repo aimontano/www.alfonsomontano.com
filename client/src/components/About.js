@@ -32,7 +32,7 @@ const styles = {
 		display: "block",
 		maxWidth: "100%",
 		maxHeight: "100%",
-		borderRadius: "100%"
+		borderRadius: 95
 	},
 	text: {
 		fontSize: "1.1rem"
@@ -48,7 +48,7 @@ const About = props => {
 					<Paper className={classes.paper}>
 						<Grid container spacing={24} justify="center">
 							<Grid item>
-								<ButtonBase className={classes.image} square="true">
+								<ButtonBase className={classes.image}>
 									<img
 										className={classes.img}
 										src="/images/profile_image.jpg"
@@ -68,7 +68,7 @@ const About = props => {
 										</Typography>
 										<IconButton
 											component="a"
-											href="https://www.linkedin.com/in/alfonso-montano-478931166/"
+											href="www.linkedin.com/in/alfonso-montano"
 											target="_blank"
 										>
 											<Icon color="primary">
@@ -91,7 +91,7 @@ const About = props => {
 											href="mailto:aimorales.montano@gmail.com"
 											target="_blank"
 										>
-											<Icon color="default">
+											<Icon color="inherit">
 												<MailIcon />
 											</Icon>
 										</IconButton>
