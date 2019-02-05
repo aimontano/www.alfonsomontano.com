@@ -49,7 +49,11 @@ const About = props => {
 						<Grid container spacing={24} justify="center">
 							<Grid item>
 								<ButtonBase className={classes.image} square="true">
-									<img className={classes.img} src="/images/me.jpg" alt="me" />
+									<img
+										className={classes.img}
+										src="/images/profile_image.jpg"
+										alt="me"
+									/>
 								</ButtonBase>
 							</Grid>
 							<Grid item xs={12} sm container>
