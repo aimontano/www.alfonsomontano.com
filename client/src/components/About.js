@@ -63,8 +63,13 @@ const About = props => {
 											About Me
 										</Typography>
 										<Typography gutterBottom>
-											This section will be dedicated to write about my thing and
-											what I plan to do as a web developer
+											I am a Full Stack Web Developer with skills which include
+											providing solutions on the front-end and/or back-end to
+											web applications.
+										</Typography>
+										<Typography gutterBottom>
+											I'm always motivated to learn new skills to improve my
+											problem solving capabilies.
 										</Typography>
 										<IconButton
 											component="a"
