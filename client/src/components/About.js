@@ -68,7 +68,7 @@ const About = props => {
 										</Typography>
 										<IconButton
 											component="a"
-											href="www.linkedin.com/in/alfonso-montano"
+											href="https://www.linkedin.com/in/alfonso-montano"
 											target="_blank"
 										>
 											<Icon color="primary">
