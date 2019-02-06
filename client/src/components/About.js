@@ -69,7 +69,7 @@ const About = props => {
 										</Typography>
 										<Typography gutterBottom>
 											I'm always motivated to learn new skills to improve my
-											problem solving capabilies.
+											problem solving capabilities.
 										</Typography>
 										<IconButton
 											component="a"
