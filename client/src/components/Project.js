@@ -9,7 +9,7 @@ import {
 	CardActions,
 	CardContent,
 	Avatar,
-	Fab
+	Button
 } from "@material-ui/core";
 import FolderIcon from "@material-ui/icons/FolderOutlined";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,14 +25,12 @@ const styles = theme => ({
 		height: 0,
 		paddingTop: "56.25%" // 16:9
 	},
-	fab: {
+	button: {
 		margin: theme.spacing.unit
 	},
-	avatar: {},
-	extendedIcon: {
+	leftIcon: {
 		marginRight: theme.spacing.unit
-	},
-	title: {}
+	}
 });
 
 const redirectToPage = url => {
@@ -62,28 +60,29 @@ const Project = props => {
 			</CardContent>
 			<CardActions className={classes.actions} disableActionSpacing>
 				{props.live.trim().length !== 0 ? (
-					<Fab
-						className={classes.fab}
-						variant="extended"
+					<Button
 						size="small"
+						color="primary"
+						variant="outlined"
 						onClick={() => redirectToPage(props.live)}
+						className={classes.button}
 					>
-						<FontAwesomeIcon icon={faEye} className={classes.extendedIcon} />
-						Demo
-					</Fab>
+						<FontAwesomeIcon icon={faEye} className={classes.leftIcon} />
+						Live
+					</Button>
 				) : (
 					<></>
 				)}
-				<Fab
-					className={classes.fab}
-					variant="extended"
+				<Button
 					size="small"
-					color="secondary"
+					color="default"
+					variant="outlined"
 					onClick={() => redirectToPage(props.github)}
+					className={classes.button}
 				>
-					<FontAwesomeIcon icon={faGithub} className={classes.extendedIcon} />
+					<FontAwesomeIcon icon={faGithub} className={classes.leftIcon} />
 					Repository
-				</Fab>
+				</Button>
 			</CardActions>
 		</Card>
 	);
