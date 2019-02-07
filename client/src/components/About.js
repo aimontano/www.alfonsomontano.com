@@ -44,7 +44,7 @@ const About = props => {
 	return (
 		<div className={classes.root}>
 			<Grid container justify="center" spacing={24}>
-				<Grid item xs={12}>
+				<Grid item xs={12} md={6}>
 					<Paper className={classes.paper}>
 						<Grid container spacing={24} justify="center">
 							<Grid item>
@@ -106,7 +106,7 @@ const About = props => {
 						</Grid>
 					</Paper>
 				</Grid>
-				<Grid item xs={12}>
+				<Grid item xs={12} md={6}>
 					<Skills />
 				</Grid>
 			</Grid>
