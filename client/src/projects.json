@@ -1,58 +1,51 @@
 [
-	{
-		"name": "Bootcamp Booster",
-		"image": "/images/bootcampbooster.png",
-		"githubLink": "https://github.com/alexanderjones19/bootcamp-forum",
-		"liveLink": "https://bootcampbooster.herokuapp.com/",
-		"description": "A website designed to build an online community for coding bootcamp students, teachers, developers and those who are interested in joining a bootcamp"
-	},
-	{
-		"name": "Mobile Mechanic",
-		"image": "/images/mobile-mechanics.png",
-		"githubLink": "https://github.com/fieldpalmer/Copper_Skull_Association",
-		"liveLink": "https://mobile-mechanics.herokuapp.com",
-		"description": "Project's idea is to allow users to get an estimate of a car maintentance repair and to be able to schedule a technician to get car serviced"
-	},
-	{
-		"name": "Donde App",
-		"image": "/images/donde1.png",
-		"githubLink": "https://github.com/lantanios/Group_Project",
-		"liveLink": "https://donde1.herokuapp.com/",
-		"description": "A website to comunicate with those around your local area to help each other when disaster strikes"
-	},
-	{
-		"name": "News Scraper",
-		"image": "/images/thenews-scraper.png",
-		"githubLink": "https://github.com/aimontano/news-scraper",
-		"liveLink": "http://thenews-scraper.herokuapp.com/",
-		"description": "A web program that allows users to view news headlines and save their preferred ones. It allows users to add notes to saved articles and delete them as they wish"
-	},
-	{
-		"name": "Burger",
-		"image": "/images/eatallburger.png",
-		"githubLink": "https://github.com/aimontano/burger",
-		"liveLink": "https://eatallburger.herokuapp.com/",
-		"description": "None yet"
-	},
-	{
-		"name": "Friend Finder",
-		"image": "/images/aimfriendfinder.png",
-		"githubLink": "https://github.com/aimontano/FriendFinder",
-		"liveLink": "https://aimfriendfinder.herokuapp.com",
-		"description": "This small program allows users to answer a questionnaire and based on the answers match to other users and return a best match."
-	},
-	{
-		"name": "Bamazon",
-		"image": "/images/bamazon.png",
-		"githubLink": "https://github.com/aimontano/Bamazon",
-		"liveLink": "",
-		"description": "A Node command line application that allows customers to buy products from a store named Bamazon. This program allows management to control the quantity of products and to add new products"
-	},
-	{
-		"name": "Liri Node App",
-		"image": "/images/liri.png",
-		"githubLink": "https://github.com/aimontano/liri-node-app",
-		"liveLink": "",
-		"description": "A command line program that allows you to search through Spotify, IMDB movies and bands in town using an api. "
-	}
+  {
+    "name": "Bootcamp Booster",
+    "image": "/images/bootcampbooster.png",
+    "githubLink": "https://github.com/alexanderjones19/bootcamp-forum",
+    "liveLink": "https://bootcampbooster.herokuapp.com/",
+    "description": "A website designed to build an online community for coding bootcamp students, teachers, developers and those who are interested in joining a bootcamp"
+  },
+  {
+    "name": "Mobile Mechanic",
+    "image": "/images/mobile-mechanics.png",
+    "githubLink": "https://github.com/fieldpalmer/Copper_Skull_Association",
+    "liveLink": "https://mobile-mechanics.herokuapp.com",
+    "description": "Project's idea is to allow users to get an estimate of a car maintentance repair and to be able to schedule a technician to get car serviced"
+  },
+  {
+    "name": "Donde App",
+    "image": "/images/donde1.png",
+    "githubLink": "https://github.com/lantanios/Group_Project",
+    "liveLink": "https://donde1.herokuapp.com/",
+    "description": "A website to comunicate with those around your local area to help each other when disaster strikes"
+  },
+  {
+    "name": "News Scraper",
+    "image": "/images/thenews-scraper.png",
+    "githubLink": "https://github.com/aimontano/news-scraper",
+    "liveLink": "http://thenews-scraper.herokuapp.com/",
+    "description": "A web program that allows users to view news headlines and save their preferred ones. It allows users to add notes to saved articles and delete them as they wish"
+  },
+  {
+    "name": "Friend Finder",
+    "image": "/images/aimfriendfinder.png",
+    "githubLink": "https://github.com/aimontano/FriendFinder",
+    "liveLink": "https://aimfriendfinder.herokuapp.com",
+    "description": "This small program allows users to answer a questionnaire and based on the answers match to other users and return a best match."
+  },
+  {
+    "name": "Bamazon",
+    "image": "/images/bamazon.png",
+    "githubLink": "https://github.com/aimontano/Bamazon",
+    "liveLink": "",
+    "description": "A Node command line application that allows customers to buy products from a store named Bamazon. This program allows management to control the quantity of products and to add new products"
+  },
+  {
+    "name": "Liri Node App",
+    "image": "/images/liri.png",
+    "githubLink": "https://github.com/aimontano/liri-node-app",
+    "liveLink": "",
+    "description": "A command line program that allows you to search through Spotify, IMDB movies and bands in town using an api. "
+  }
 ]
